@@ -17,3 +17,10 @@ jobs:
           with:
             java-version: '17'
             distribution: 'adopt'
+
+        # JAR FILE BUILD AND PERMISSION
+        - name: Grant jar
+          run: chmod +x gradlew
+
+        - name: Build jar
+          run: ./gradlew build bootJAR
